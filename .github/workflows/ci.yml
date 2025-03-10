@@ -3,31 +3,27 @@ name: C++ CI Workflow
 on:
   push:
     branches:
-      - master  # или любая другая ветка, для которой ты хочешь настроить CI
+      - main
   pull_request:
     branches:
-      - master  # или любая другая ветка
+      - main
 
 jobs:
   build:
-    runs-on: windows-latest  # Можно использовать другие ОС, например, windows-latest
+    runs-on: linux ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Set up C++ Compiler
-        uses: actions/setup-cpp@v1  # Эта action поможет настроить компилятор C++
+      - name: dependencies
+      - run: 
+          sudo apt update
+          sudo apt install -y build-essential libgtest-dev
 
-      - name: Install dependencies
+      - name: build
         run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential  # Устанавливаем необходимые инструменты для компиляции
+          g++ -o game.cpp 
 
-      - name: Build the project
+      - name: run
         run: |
-          g++ -o my_program game.cpp  # Пример компиляции, если у тебя один файл main.cpp, или подставь свой файл/проект
-
-      - name: Run tests
-        run: |
-          ./my_program  # Запуск скомпилированной программы
+         ./game  
