@@ -2,8 +2,10 @@ name: C++ CI Workflow
 
 on:
   push:
+  workflow_dispatch:
     branches:
       - main
+    
   pull_request:
     branches:
       - main
