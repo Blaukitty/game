@@ -2,9 +2,9 @@ name: C++ CI Workflow
 
 on:
   push:
-  workflow_dispatch:
     branches:
       - main
+  workflow_dispatch:
     
   pull_request:
     branches:
@@ -17,15 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: dependencies
-      - run: 
+      - name: Install dependencies
+      - run: |
           sudo apt update
           sudo apt install -y build-essential libgtest-dev
 
       - name: build
         run: |
-          g++ -o game.cpp 
-
+          g++ game.cpp -o game 
       - name: run
         run: |
          ./game  
