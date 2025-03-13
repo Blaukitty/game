@@ -23,7 +23,7 @@ public:
 		money = 0;
 	}
 
-	void showStatus() { // показываем все данные об игроке
+	void showStatus() { // ГЇГ®ГЄГ Г§Г»ГўГ ГҐГ¬ ГўГ±ГҐ Г¤Г Г­Г­Г»ГҐ Г®ГЎ ГЁГЈГ°Г®ГЄГҐ
 		cout << "\n--- Player Status :<3  ---\n";
 		cout << "Damage: " << damage << endl;
 		cout << "Protection: " << protection << endl;
@@ -33,22 +33,22 @@ public:
 
 };
 
-class level {  // класс уровень
+class level {  // ГЄГ«Г Г±Г± ГіГ°Г®ГўГҐГ­Гј
 public:
-	int lev; // поле класса
+	int lev; // ГЇГ®Г«ГҐ ГЄГ«Г Г±Г±Г 
 
 	level() {
 		lev = 1;
 	}
 
-	void level_counter(your_carts &cart1) {   //создаем функцию подсчета уровня
+	void level_counter(your_carts &cart1) {   //Г±Г®Г§Г¤Г ГҐГ¬ ГґГіГ­ГЄГ¶ГЁГѕ ГЇГ®Г¤Г±Г·ГҐГІГ  ГіГ°Г®ГўГ­Гї
 		if (cart1.money == lev*2) {
 			lev += 1;
 		}
 	}
 
 	void showLevel() {
-		cout << "\n--- Player Level :)  ---\n";  // функция отображения уровня
+		cout << "\n--- Player Level :)  ---\n";  // ГґГіГ­ГЄГ¶ГЁГї Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГї ГіГ°Г®ГўГ­Гї
 		cout << "Level: " << lev << endl;
 	}
 };
@@ -62,13 +62,13 @@ public:
 		cout << "By the way, there are some special goals of every race.\n You will have +2 damege as a human, +2 speed as an elf or +2 protection as a dwarf";
 		cin >> race;
 		if (race == "human") {
-			cart.damage += 2; // увеличиваем урон человека
+			cart.damage += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ ГіГ°Г®Г­ Г·ГҐГ«Г®ГўГҐГЄГ 
 		}
 		else if (race == "elf") {
-			cart.speed += 2; // увеличиваем скорость эльфа
+			cart.speed += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ Г±ГЄГ®Г°Г®Г±ГІГј ГЅГ«ГјГґГ 
 		}
 		else if (race == "dwarf") {
-			cart.protection += 2; // увеличиваем защиту гнома
+			cart.protection += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ Г§Г Г№ГЁГІГі ГЈГ­Г®Г¬Г 
 		}
 		else {
 			cout << "Incorrect race selected!\n";
@@ -86,13 +86,13 @@ public:
 		cout << "There are also some special goals of every class.\n You will have +2 damege as a hunter, +2 speed as a traveler or +2 protection as a knight";
 		cin >> cl_ass;
 		if (cl_ass == "hunter") {
-			cart0.damage += 2; // увеличиваем урон охотника
+			cart0.damage += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ ГіГ°Г®Г­ Г®ГµГ®ГІГ­ГЁГЄГ 
 		}
 		else if (cl_ass == "traveler") {
-			cart0.speed += 2; // увеличиваем скорость путешественника
+			cart0.speed += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ Г±ГЄГ®Г°Г®Г±ГІГј ГЇГіГІГҐГёГҐГ±ГІГўГҐГ­Г­ГЁГЄГ 
 		}
 		else if (cl_ass == "knight") {
-			cart0.protection += 2; // увеличиваем защиту рыцаря
+			cart0.protection += 2; // ГіГўГҐГ«ГЁГ·ГЁГўГ ГҐГ¬ Г§Г Г№ГЁГІГі Г°Г»Г¶Г Г°Гї
 		}
 		else {
 			cout << "Incorrect class selected!\n";
@@ -102,7 +102,7 @@ public:
 };
 
 int main() {
-	your_carts playerCart;  //создаем объекты каждого класса
+	your_carts playerCart;  //Г±Г®Г§Г¤Г ГҐГ¬ Г®ГЎГєГҐГЄГІГ» ГЄГ Г¦Г¤Г®ГЈГ® ГЄГ«Г Г±Г±Г 
 	race playerRace;
 	cl_ass playerClass;
 	level playerLevel;
